@@ -1,0 +1,114 @@
+body{
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+    width: min(40rem, 50%);
+}
+
+.result{
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius:20px;
+    text-align: center;
+    padding: 10px 50px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    
+}
+.percentage{
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 12rem;
+    margin-inline: auto;
+    box-shadow: inset 0px 0px 80px 30px hsla(256, 72%, 46%, 1);
+}
+.score{
+    font-size: 50px;
+}
+.result h1, .total, .description{
+    color: hsl(241, 100%, 89%);
+}
+
+
+/* Summary */
+.summary{
+   
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 10px 5px 2px hsla(210, 6%, 93%, 0.2);
+    width: 100%;
+    height: 400px;
+    padding: 10px 50px;
+}
+
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+.reaction{
+    background-color: hsl(0, 100%, 67%, .1);
+    color:  hsl(0, 100%, 67%);
+}
+
+.memory{
+    background-color: hsl(39, 100%, 56%, .1);
+    color: hsl(39, 100%, 56%);
+}
+.verbal{
+    background-color: hsl(166, 100%, 37%, .1);
+    color: hsl(166, 100%, 37%);
+}
+.visual{
+    background-color: hsl(234, 85%, 45%, .1);;
+    color:  hsl(234, 85%, 45%);
+}
+.summary-score{
+    color: black;
+}
+.summary-score span{
+    color: hsl(180, 1%, 64%);
+}
+button{
+    background-color: hsl(223, 5%, 27%);
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 380px) {
+    main{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .result{
+        width: 280px;
+        border-radius: 0 0 20px 20px;
+    }
+   
+    .summary{
+       width: 300px;
+    }
+
+}
